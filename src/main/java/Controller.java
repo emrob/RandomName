@@ -34,7 +34,7 @@ public class Controller {
 
             HashMap<String, Object> model = new HashMap<>();
             model.put("result", result);
-            return new ModelAndView(model, "result.vtl");
+            return new ModelAndView(model, "result2.vtl");
 
         }, velocityTemplateEngine);
 
