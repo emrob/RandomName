@@ -33,6 +33,11 @@ public class RandomName {
         return names.get(0);
     };
 
+    public String returnTwoNames() {
+        Collections.shuffle(names);
+        return names.get(0) + " & " + names.get(1);
+    };
+
 
 
 }
