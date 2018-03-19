@@ -22,12 +22,11 @@ public class Controller {
             names.add("Will");
             names.add("Herbie");
             Collections.shuffle(names);
-
             String result = names.get(0);
 
             HashMap<String, Object> model = new HashMap<>();
             model.put("result", result);
-            return new ModelAndView(model, "results.vtl");
+            return new ModelAndView(model, "result.vtl");
 
 
         }, velocityTemplateEngine);
