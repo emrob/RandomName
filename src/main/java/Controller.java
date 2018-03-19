@@ -14,20 +14,14 @@ public class Controller {
 
         get("/one", (req, res) -> {
             ArrayList<String> names = new ArrayList<String>();
-            names.add("Emma");
-            names.add("Derek");
-            names.add("Mark");
-            names.add("Darrell");
-            names.add("Rosemary");
-            names.add("Will");
-            names.add("Herbie");
-            Collections.shuffle(names);
-            String result = names.get(0);
+
+            RandomName randomName = new RandomName(new ArrayList<String>());
+            String result = randomName.returnRandomName();
+
 
             HashMap<String, Object> model = new HashMap<>();
             model.put("result", result);
             return new ModelAndView(model, "result.vtl");
-
 
         }, velocityTemplateEngine);
 
