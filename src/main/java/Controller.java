@@ -38,6 +38,18 @@ public class Controller {
 
         }, velocityTemplateEngine);
 
+        get("/three", (req, res) -> {
+            ArrayList<String> names = new ArrayList<String>();
+
+            RandomName randomName = new RandomName(new ArrayList<String>());
+            String result = randomName.returnThreeNames();
+
+
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("result", result);
+            return new ModelAndView(model, "result3.vtl");
+
+        }, velocityTemplateEngine);
     }
 
 }

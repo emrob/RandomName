@@ -38,6 +38,11 @@ public class RandomName {
         return names.get(0) + " & " + names.get(1);
     };
 
+    public String returnThreeNames() {
+        Collections.shuffle(names);
+        return names.get(0) + ", " + names.get(1) + " & " + names.get(2);
+    };
+
 
 
 }
